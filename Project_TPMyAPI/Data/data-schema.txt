@@ -1,0 +1,42 @@
+﻿CREATE DATABASE Top10Jeux;
+
+use Top10Jeux;
+
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY,
+    Username VARCHAR(50),
+    Email VARCHAR(100),
+    Password VARCHAR(100)
+);
+
+CREATE TABLE TopGames (
+    GameID INT PRIMARY KEY IDENTITY,
+    GameName VARCHAR(100),
+    Genre VARCHAR(50),
+    Platforms VARCHAR(100),
+    ReleaseDate DATE,
+    AverageRating FLOAT,
+    Summary TEXT,
+    AddedByUserID INT,
+    FOREIGN KEY (AddedByUserID) REFERENCES Users(UserID)
+);
+
+
+INSERT INTO Users (Username, Email, Password)
+VALUES 
+    ('utilisateur1', 'utilisateur1@example.com', 'motdepasse1'),
+    ('utilisateur2', 'utilisateur2@example.com', 'motdepasse2'),
+    ('utilisateur3', 'utilisateur3@example.com', 'motdepasse3');
+
+INSERT INTO TopGames (GameName, Genre, Platforms, ReleaseDate, AverageRating, Summary, AddedByUserID)
+VALUES 
+    ('Red Dead Redemption 2', 'Action-aventure', 'PC, PS4, Xbox One', '2018-10-26', 9.7, 'Un chef-dœuvre de monde ouvert mettant en scène Arthur Morgan, un hors-la-loi vivant à lépoque de la fin de lère du Far West.', 1),
+    ('The Witcher 3: Wild Hunt', 'RPG', 'PC, PS4, Xbox One, Switch', '2015-05-19', 9.8, 'Une épopée RPG épique basée sur les romans de fantasy de lauteur polonais Andrzej Sapkowski, suivant les aventures du sorceleur Geralt de Riv.', 2),
+    ('God of War', 'Action-aventure', 'PS4', '2018-04-20', 9.5, 'Une réinvention spectaculaire de la série God of War, mettant en vedette Kratos et son fils Atreus dans une aventure à travers les mythologies nordiques.', 3),
+    ('Among Us', 'Party game, Social deduction', 'PC, Android, iOS', '2018-06-15', 8.4, 'Un jeu multijoueur en ligne où les joueurs travaillent ensemble pour accomplir des tâches sur un vaisseau spatial, tandis que certains joueurs sont des imposteurs cherchant à les éliminer.', 1),
+    ('The Legend of Zelda: Breath of the Wild', 'Action-aventure', 'Switch, Wii U', '2017-03-03', 9.5, 'Un jeu daventure révolutionnaire dans lequel les joueurs explorent un vaste monde ouvert, résolvent des énigmes et combattent des ennemis pour sauver le royaume dHyrule.', 2),
+    ('Overwatch', 'FPS, Hero shooter', 'PC, PS4, Xbox One, Switch', '2016-05-24', 8.6, 'Un jeu de tir par équipe en ligne où les joueurs choisissent parmi une variété de héros aux capacités uniques pour conquérir des objectifs.', 3),
+    ('Minecraft', 'Sandbox, Survival', 'PC, Android, iOS, PS4, Xbox One, Switch', '2011-11-18', 9.4, 'Un jeu de construction et de survie en monde ouvert où les joueurs peuvent explorer, créer et construire dans des environnements générés de manière procédurale.', 1),
+    ('Call of Duty: Warzone', 'Battle royale, FPS', 'PC, PS4, Xbox One', '2020-03-10', 8.9, 'Un jeu de tir à la première personne en ligne qui propose un mode battle royale massif avec jusquà 150 joueurs.', 2),
+    ('Fortnite', 'Battle royale, Survival', 'PC, Android, iOS, PS4, Xbox One, Switch', '2017-07-25', 8.2, 'Un jeu de bataille royale où les joueurs se battent pour être le dernier survivant dans un monde coloré et en constante évolution.', 3),
+    ('League of Legends', 'MOBA', 'PC', '2009-10-27', 9.3, 'Un jeu de stratégie en ligne où deux équipes de champions uniques saffrontent pour détruire la base adverse, offrant une profondeur stratégique et une action compétitive.', 1);
