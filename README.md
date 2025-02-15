@@ -55,7 +55,7 @@ Before you begin, make sure you have the following installed on your system:
 ```json
   {
     "ConnectionStrings": {
-      "ConnectionStrings": "Server=localhost;Database=<Your Database Name>;port=<Port Number>;User id=<Your Postgres Username>;password=<Your Password>"
+      "ConnectionStrings": ""
     },
     "Logging": {
       "LogLevel": {
