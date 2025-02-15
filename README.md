@@ -42,7 +42,7 @@ Before you begin, make sure you have the following installed on your system:
    - 🔹 `<Your Password>`: Set your PostgreSQL password.  
    - 🔹 `<Your Database Name>`: Name the database as desired.  
    - 🔹 `<Port Number>`: Choose the port you want to use (e.g., `5432`).  
-   - 🔹 `<Your File Path>`: Provide the path to the `kshtech-db` folder you created earlier.  
+   - 🔹 `<Your File Path>`: Provide the path to the `<Your folder name>-db` folder you created earlier.  
 
    💡 **Note:** This command initializes a PostgreSQL database inside a Docker container.
 > [!IMPORTANT]
