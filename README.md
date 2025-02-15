@@ -65,13 +65,6 @@ Before you begin, make sure you have the following installed on your system:
     }
   ```
 3. Fill out the file with project-specific information as provided by the project manager.  
-4. To generate a secure key for authentication, use the following command in **Git Bash**:
-
-    ```bash
-    openssl rand -base64 32
-    ```  
-
-   💡 **Note:** The generated secret key will be used for authentication in your project.
 
 ---
 
