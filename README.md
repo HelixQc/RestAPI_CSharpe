@@ -62,23 +62,7 @@ Before you begin, make sure you have the following installed on your system:
         "Default": "Information",
         "Microsoft.AspNetCore": "Warning"
       }
-    },
-    "AllowedHosts": "*",
-    "Jwt": {
-      "Key": "Generate a random key with Git Bash",
-      "Issuer": "http://localhost:<API port>",
-      "Audience": "http://localhost:<API port>"
-    },
-    "EmailConfiguration": {
-      "From": "dev Email",
-      "SmtpServer": "smtp.gmail.com",
-      "Port": 465,
-      "Username": "dev Email",
-      "Password": "dev password"
-    },
-    "Url": "http://localhost:<the fetching port>",
-    "IsDevelopment": true
-  }
+    }
   ```
 3. Fill out the file with project-specific information as provided by the project manager.  
 4. To generate a secure key for authentication, use the following command in **Git Bash**:
